@@ -1,7 +1,7 @@
 mod models;
 fn main() {
-    let nonce = String::from("000");
-    let mut blockchain = models::blockchain::Blockchain::new();
-    
-    models::blockchain::Blockchain::add_block(&mut blockchain, nonce);
+    let difficulty = 1;
+    let mut blockchain = models::blockchain::Blockchain::new(difficulty);
+
+    models::blockchain::Blockchain::add_block(&mut blockchain);
 }
